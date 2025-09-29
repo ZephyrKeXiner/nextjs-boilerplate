@@ -24,3 +24,27 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* 2048 animations and shadows */
+@keyframes pop {
+  0% { transform: scale(0.6); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes merge {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.animate-pop {
+  animation: pop 150ms ease-out;
+}
+
+.animate-merge {
+  animation: merge 160ms ease-out;
+}
+
+.shadow-tile {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12), inset 0 0 0 1px rgba(255,255,255,0.35);
+}
